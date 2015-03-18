@@ -1,4 +1,4 @@
-package main.java.io.sommers.sfwizard.ui.main;
+package io.sommers.sfwizard.ui.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
