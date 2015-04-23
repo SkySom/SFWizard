@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
@@ -20,9 +21,13 @@ public class XMLTranslatorController extends BaseController {
 	public Button inputFileChooserButton;
 	public Button translationFileChooserButton;
 	public Button outputFileChooserButton;
+	public Button xmlTranslationBeginButton;
+
 	public TextField inputFileChooserTextField;
 	public TextField translationFileChooserTextField;
 	public TextField outputFileChooserTextField;
+
+	public ProgressBar progressBar;
 
 	private FileChooser fileChooser = new FileChooser();
 	private DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -55,6 +60,13 @@ public class XMLTranslatorController extends BaseController {
 				if(file != null) {
 					outputFileChooserTextField.setText(file.getAbsolutePath());
 				}
+			}
+		});
+
+		xmlTranslationBeginButton.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent actionEvent) {
+
 			}
 		});
 	}
