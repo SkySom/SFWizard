@@ -1,15 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <VBox maxHeight="200.0" maxWidth="380" minHeight="200" minWidth="380" prefHeight="200.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sommers.sfwizard.ui.xmltranslator.XMLTranslatorController">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="45.0" prefHeight="45.0" prefWidth="380.0">
          <children>
-             <TextField prefHeight="25.0" prefWidth="250.0" />
-             <Button fx:id="inputFileChooserButton">Choose File</Button>
+             <TextField fx:id="inputFileChooserTextField" prefHeight="25.0" prefWidth="225.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+             <Button fx:id="inputFileChooserButton" prefHeight="25.0" prefWidth="115.0" text="Input File" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
+       <HBox maxHeight="45.0" prefHeight="45.0" prefWidth="380.0">
+           <children>
+               <TextField fx:id="translationFileChooserTextField" prefHeight="25.0" prefWidth="225.0">
+                   <HBox.margin>
+                       <Insets left="10.0" top="10.0" />
+                   </HBox.margin>
+               </TextField>
+               <Button fx:id="translationFileChooserButton" prefHeight="25.0" prefWidth="115.0" text="Translation File" textAlignment="CENTER">
+                   <HBox.margin>
+                       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </HBox.margin>
+               </Button>
+           </children>
+       </HBox>
+       <HBox maxHeight="45.0" prefHeight="45.0" prefWidth="380.0">
+           <children>
+               <TextField fx:id="outputFileChooserTextField" prefHeight="25.0" prefWidth="225.0">
+                   <HBox.margin>
+                       <Insets left="10.0" top="10.0" />
+                   </HBox.margin>
+               </TextField>
+               <Button fx:id="outputFileChooserButton" prefHeight="25.0" prefWidth="115.0" text="Output Directory" textAlignment="CENTER">
+                   <HBox.margin>
+                       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </HBox.margin>
+               </Button>
+           </children>
+       </HBox>
+       <HBox maxHeight="45.0" prefHeight="45.0" prefWidth="380.0">
+           <children>
+               <Button prefHeight="20.0" prefWidth="115.0" text="Begin" textAlignment="CENTER" fx:id="xmlTranslationBeginButton">
+                   <HBox.margin>
+                       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </HBox.margin>
+               </Button>
+            <ProgressBar fx:id="progressBar" prefHeight="25.0" prefWidth="200.0" progress="0.0">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </ProgressBar>
+           </children>
+       </HBox>
    </children>
 </VBox>
