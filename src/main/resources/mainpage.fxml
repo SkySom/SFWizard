@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/7"
-          fx:controller="io.sommers.sfwizard.ui.main.Controller">
-
+<GridPane alignment="center" hgap="0" prefHeight="300.0" prefWidth="500.0" vgap="0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sommers.sfwizard.ui.main.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.0" prefHeight="300.0" prefWidth="500.0">
+         <items>
+            <AnchorPane minHeight="200.0" minWidth="120.0" prefHeight="200.0" prefWidth="120.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="120.0" spacing="10" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Button fx:id="xmlTranslatorButton" alignment="CENTER" mnemonicParsing="false" prefHeight="15.0"
+                                prefWidth="100.0" text="XML Translator" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
+               <children>
+                  <Pane layoutX="0.0" layoutY="0.0" prefHeight="200.0" prefWidth="380.0" AnchorPane.bottomAnchor="0.0"
+                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+                        fx:id="wizardPane" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
 </GridPane>
