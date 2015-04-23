@@ -9,8 +9,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mainpage.fxml"));
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("mainpage.fxml"));
+        Parent root = (Parent)loader.load();
+        MainController controller = (MainController)loader.getController();
+        controller.setStage(primaryStage);
         primaryStage.setTitle("SFWizard");
         primaryStage.setScene(new Scene(root, 500, 300));
         primaryStage.show();
