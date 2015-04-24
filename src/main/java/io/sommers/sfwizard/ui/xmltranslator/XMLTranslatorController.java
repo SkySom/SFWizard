@@ -1,5 +1,6 @@
 package io.sommers.sfwizard.ui.xmltranslator;
 
+import io.sommers.sfwizard.core.xml.Translator;
 import io.sommers.sfwizard.ui.BaseController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -66,7 +67,12 @@ public class XMLTranslatorController extends BaseController {
 		xmlTranslationBeginButton.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent actionEvent) {
+				File inputFile = new File(inputFileChooserTextField.getText());
+				File translationFile = new File(translationFileChooserTextField.getText());
+				File outputDirectory = new File(outputFileChooserTextField.getText());
 
+				Translator translator = new Translator();
+				translator.translate(inputFile, translationFile, outputDirectory, progressBar);
 			}
 		});
 	}
