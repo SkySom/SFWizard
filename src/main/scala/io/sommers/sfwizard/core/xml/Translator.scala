@@ -16,7 +16,7 @@ class Translator {
 			var readfile = xmlReader.read(inputFile)
 			var stringbuilder = new StringBuilder
 			if(readfile != null) {
-				val fieldDefinitions = (readfile \ "field-definition").foreach(elem => println(elem.toString()))
+				val fieldDefinitions = (readfile \ "field-definition")
 				val xlsx =  new XLSXReader
 				xlsx.read(translationFile)
 			} else {
